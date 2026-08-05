@@ -29,4 +29,3 @@ Communication claire, organisation rigoureuse, réactivité — et une préfére
 
 *Disponible pour discuter d'une mission ou d'une collaboration.*
 
-![Stats GitHub](https://github-readme-stats.vercel.app/api?username=SebastienThomasDEV&show_icons=true&theme=default)
