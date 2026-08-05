@@ -1,19 +1,36 @@
-# Thomas Sébastien - Développeur Web
+# Concepteur/Développeur — Web & Mobile
 
-- 💼 Expérience dans la conception et la mise en œuvre d'architectures web et le développement de systèmes d'informations.
-- 📊 Je porte une attention à la performance et l'optimisation des mes applications.
-- 🦾 J'aime me challenger, et surtout créer !
+Je conçois et développe des applications web et mobile, de la conception à la mise en production. Mon approche : partir d'un besoin métier, structurer une architecture solide, et livrer un produit propre, maintenable et pensé pour l'utilisateur final.
 
-## Side Projects
+J'ai travaillé sur des projets variés — outils de gestion internes (ERP), applications de suivi terrain, plateformes éducatives — et j'ai également transmis ces compétences en formant de futurs développeurs.
 
-Voici quelques-uns de mes projets GitHub :
+Aujourd'hui **freelance**, j'interviens sur des missions de développement complet, de refonte technique, ou en renfort d'équipe, avec une autonomie sur l'ensemble du cycle projet : cadrage, architecture, développement, mise en production. Je propose également des sessions de formation, pour des centres de formation comme pour des particuliers.
 
-- [SampleJS](https://github.com/SebastienThomasDEV/SimpleJs) : Petit framework JS maison avec pleins de choses sympa !
-- [CastleStorm](https://sebastienthomasdev.github.io/CastleStorm/) : Un Canva-game avec du js natif (attention ça va vite ^^)
-- [Sunpower](https://sebastienthomasdev.github.io/Sunpower/): Intégration en HTML/CSS/JS natif d'une maquette, responsive et dynamique
-- [LILIPINSO](https://sebastienthomasdev.github.io/Lilipinso/): Intégration en bootstrap d'un site statique
+- 🌱 Attentif aux évolutions d'architecture, de performance et de bonnes pratiques
 
-Je suis ouvert aux opportunités de collaboration et de projet passionnant. 
-N'hésitez pas à explorer mes dépôts pour en savoir plus sur mes compétences et projets.
+## Stack technique
 
-Merci !
+**Web**
+`React` `Next.js` `Angular` `Vite`
+
+**Mobile**
+`React Native` `Expo` `Ionic`
+
+**Back-end & API**
+`Nest.js` `Symfony` `API Platform` `PHP` `Node.js`
+
+**Data & conception**
+`SQL` `UML` `Merise`
+
+**Outils**
+`Git` `Docker` `Figma`
+
+Communication claire, organisation rigoureuse, réactivité — et une préférence marquée pour proposer des solutions plutôt que d'attendre des directives.
+
+---
+
+*Disponible pour discuter d'une mission ou d'une collaboration.*
+
+<!--
+![Stats GitHub](https://github-readme-stats.vercel.app/api?username=SebastienThomasDEV&show_icons=true&theme=default)
+-->
