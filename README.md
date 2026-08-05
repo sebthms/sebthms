@@ -6,8 +6,6 @@ J'ai travaillé sur des projets variés — outils de gestion internes (ERP), ap
 
 Aujourd'hui **freelance**, j'interviens sur des missions de développement complet, de refonte technique, ou en renfort d'équipe, avec une autonomie sur l'ensemble du cycle projet : cadrage, architecture, développement, mise en production. Je propose également des sessions de formation, pour des centres de formation comme pour des particuliers.
 
-- 🌱 Attentif aux évolutions d'architecture, de performance et de bonnes pratiques
-
 ## Stack technique
 
 **Web**
