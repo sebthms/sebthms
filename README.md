@@ -23,9 +23,10 @@ Aujourd'hui **freelance**, j'interviens sur des missions de développement compl
 **Outils**
 `Git` `Docker` `Figma`
 
-Communication claire, organisation rigoureuse, réactivité — et une préférence marquée pour proposer des solutions plutôt que d'attendre des directives.
+Communication claire, organisation rigoureuse, réactivité puis une préférence marquée pour proposer des solutions plutôt que d'attendre des directives.
 
 ---
 
 *Disponible pour discuter d'une mission ou d'une collaboration.*
 
+https://github-stats-extended.vercel.app/api?username=sebthms&rank_icon=github&hide_title=true&show_icons=true&include_all_commits=true&theme=vue-dark
