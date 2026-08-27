@@ -1,4 +1,4 @@
-# Concepteur/Développeur — Web & Mobile
+# Concepteur-Développeur 
 
 Je conçois et développe des applications web et mobile, de la conception à la mise en production. Mon approche : partir d'un besoin métier, structurer une architecture solide, et livrer un produit propre, maintenable et pensé pour l'utilisateur final.
 
@@ -25,8 +25,8 @@ Aujourd'hui **freelance**, j'interviens sur des missions de développement compl
 
 Communication claire, organisation rigoureuse, réactivité puis une préférence marquée pour proposer des solutions plutôt que d'attendre des directives.
 
+[![GitHub Stats](https://github-stats-extended.vercel.app/api?username=sebthms&rank_icon=github&custom_title=Mes%20stats%20%3A%29&show_icons=true&include_all_commits=true&theme=discord_old_blurple)](https://github-stats-extended.vercel.app/api?username=sebthms&rank_icon=github&custom_title=Mes%20stats%20%3A%29&show_icons=true&include_all_commits=true&theme=discord_old_blurple)
+
 ---
 
 *Disponible pour discuter d'une mission ou d'une collaboration.*
-
-https://github-stats-extended.vercel.app/api?username=sebthms&rank_icon=github&hide_title=true&show_icons=true&include_all_commits=true&theme=vue-dark
