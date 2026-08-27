@@ -2,7 +2,7 @@
 
 Je conçois et développe des applications web et mobile, de la conception à la mise en production. Mon approche : partir d'un besoin métier, structurer une architecture solide, et livrer un produit propre, maintenable et pensé pour l'utilisateur final.
 
-J'ai travaillé sur des projets variés — outils de gestion internes (ERP), applications de suivi terrain, plateformes éducatives — et j'ai également transmis ces compétences en formant de futurs développeurs.
+J'ai travaillé sur des projets variés, outils de gestion internes (ERP), applications de suivi terrain, plateformes éducatives puis j'ai également transmis ces compétences en formant de futurs développeurs.
 
 Aujourd'hui **freelance**, j'interviens sur des missions de développement complet, de refonte technique, ou en renfort d'équipe, avec une autonomie sur l'ensemble du cycle projet : cadrage, architecture, développement, mise en production. Je propose également des sessions de formation, pour des centres de formation comme pour des particuliers.
 
