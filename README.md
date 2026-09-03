@@ -29,19 +29,15 @@ Je développe des apps web et mobile, de la conception à la mise en prod. ERP, 
 
 ---
 
-## Ce sur quoi j'interviens
+## Ce sur quoi je peut intervenir
 
-🌐 **Applications web sur mesure**
-- ERP, outils internes, dashboards, refonte technique
+🌐 **Applications web sur mesure** : ERP, outils internes, dashboards, refonte technique
 
-📱 **Mobile**  
-- Apps React Native / Expo, intégration web + mobile sur un même back-end
+📱 **Mobile** : Apps React Native / Expo, intégration web + mobile sur un même back-end
 
-🛠️ **Process de A à Z**  
-- Cadrage, modélisation BDD, dev front/back, mise en production, maintenance
+🛠️ **Process de A à Z** : Cadrage, modélisation BDD, dev front/back, mise en production, maintenance
 
-🎓 **Transmission**  
-- plus de 250h de formations (DWWM, CDA) — supports, TP, encadrement de projets
+🎓 **Transmission** : plus de 250h de formations (DWWM, CDA) — supports, TP, encadrement de projets
 
 ---
 
