@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sebastien-thomas.fr/sitemap.xml
+Sitemap: https://sebthms.github.io/sebthms/sitemap.xml
