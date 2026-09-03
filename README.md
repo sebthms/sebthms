@@ -1,6 +1,6 @@
 # Sébastien Thomas
 
-💻 Concepteur-développeur full stack — 3 ans en ESN, aujourd'hui **freelance**  
+💻 Concepteur-développeur full stack, 3 ans en ESN, aujourd'hui **freelance**  
 🏡 Montpellier ou à distance  
 🚀 Disponible pour un projet
 
