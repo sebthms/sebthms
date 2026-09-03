@@ -1,0 +1,358 @@
+/* === RESPONSIVE === */
+
+body.nav-open {
+    overflow: hidden;
+}
+
+body.nav-open::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.28);
+    z-index: 999;
+    pointer-events: auto;
+}
+
+@media (max-width: 768px) {
+    .hero-layout {
+        grid-template-columns: 1fr;
+        gap: var(--section-gap);
+    }
+
+    .hero-aside {
+        border-left: none;
+        padding-left: 0;
+        border-top: 1px solid rgba(0, 0, 0, 0.08);
+        padding-top: 0.85rem;
+        padding-bottom: 0;
+    }
+
+    .hero-identity {
+        gap: 1.25rem;
+    }
+
+    .hero-photo {
+        width: clamp(112px, 24vw, 152px);
+        height: clamp(112px, 24vw, 152px);
+    }
+
+    .hero-title-line {
+        font-size: clamp(1.85rem, 8vw, 2.5rem);
+    }
+
+    .hero-title-accent,
+    .hero-role {
+        padding-left: 0;
+    }
+
+    .hero-tagline {
+        font-size: clamp(0.8125rem, 3.5vw, 0.9rem);
+    }
+
+    .hero-traits {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .hero-traits li {
+        font-size: clamp(0.68rem, 2.6vw, 0.72rem);
+        padding: 0.35rem 0.65rem;
+        background: #ececee;
+        border-radius: 999px;
+        color: #6e6e73;
+        letter-spacing: 0.02em;
+        padding-left: 0.65rem;
+    }
+
+    .hero-traits li::before {
+        display: none;
+    }
+
+    .hero-card {
+        width: 92%;
+        border-radius: 24px;
+    }
+
+    .pre-scroll-content {
+        padding: clamp(1rem, 3vw, 1.25rem) clamp(1.1rem, 3.5vw, 1.35rem);
+    }
+
+    .card-headline {
+        font-size: clamp(1.1rem, 4.5vw, 1.45rem);
+    }
+
+    .card-subline {
+        font-size: clamp(0.72rem, 2.8vw, 0.82rem);
+        max-width: none;
+    }
+
+    .card-pillars {
+        grid-template-columns: 1fr;
+        gap: 0.65rem;
+    }
+
+    .card-pillar {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        padding: 0 0 0.65rem;
+    }
+
+    .card-pillar:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    .card-pillar-val {
+        font-size: clamp(0.72rem, 2.5vw, 0.78rem);
+        overflow-wrap: anywhere;
+    }
+
+    .process-wrapper {
+        flex-direction: column;
+        gap: var(--section-gap);
+        padding: var(--section-py) var(--section-px);
+    }
+
+    .process-header {
+        flex: none;
+    }
+
+    .process-title {
+        font-size: clamp(1.25rem, 5vw, 1.4rem);
+    }
+
+    .timeline {
+        padding-left: 0;
+    }
+
+    .timeline-content h3 {
+        font-size: clamp(0.9rem, 3vw, 0.95rem);
+    }
+
+    .timeline-short,
+    .timeline-detail p {
+        font-size: clamp(0.75rem, 2.8vw, 0.8rem);
+    }
+
+    .passion-label {
+        left: var(--section-px);
+        right: var(--section-px);
+        max-width: none;
+        top: clamp(4.25rem, 11vh, 5.5rem);
+    }
+
+    .passion-label-title {
+        font-size: clamp(1.25rem, 5.5vw, 1.45rem);
+    }
+
+    .passion-section {
+        padding: var(--section-px);
+    }
+
+    .passion-card,
+    .passion-card--link {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: var(--passion-card-pad);
+        padding: var(--passion-card-pad);
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .passion-card-visual {
+        display: flex;
+        flex: 0 0 auto;
+        width: 100%;
+        height: clamp(120px, 32vw, 180px);
+        min-height: 0;
+        padding: clamp(0.75rem, 2.5vw, 1rem);
+        border-radius: 12px;
+    }
+
+    .passion-card-visual.meridian-visual {
+        padding: 0;
+        height: clamp(140px, 34vw, 200px);
+    }
+
+    .meridian-preview {
+        transform: none;
+        object-fit: cover;
+        border-radius: 12px;
+    }
+
+    .voxel-preview {
+        width: min(100%, 140px);
+    }
+
+    .passion-card-body {
+        padding: 0;
+        width: 100%;
+        min-width: 0;
+    }
+
+    .passion-card-title {
+        font-size: clamp(1.35rem, 5.5vw, 1.75rem);
+    }
+
+    .passion-card-desc,
+    .project-note {
+        font-size: clamp(0.875rem, 3.2vw, 1rem);
+        line-height: 1.5;
+        overflow-wrap: anywhere;
+    }
+
+    .passion-tags {
+        gap: 0.35rem;
+    }
+
+    .passion-tags li {
+        font-size: clamp(0.72rem, 2.5vw, 0.8125rem);
+    }
+
+    .contact-section {
+        padding: clamp(4.5rem, 12vh, 5.5rem) var(--section-px)
+            calc(3rem + env(safe-area-inset-bottom, 0px));
+        text-align: center;
+    }
+
+    .contact-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .contact-eyebrow {
+        margin-bottom: 0.85rem;
+    }
+
+    .contact-title {
+        font-size: clamp(2.25rem, 13vw, 3.5rem);
+        margin-bottom: clamp(1.75rem, 5vh, 2.5rem);
+    }
+
+    .contact-email {
+        gap: 0.75rem;
+        width: 100%;
+        max-width: 100%;
+        font-size: clamp(0.8125rem, 3.8vw, 1.05rem);
+        letter-spacing: -0.03em;
+    }
+
+    .contact-email:hover,
+    .contact-email:focus-visible {
+        padding-left: 0;
+    }
+
+    .contact-email span:first-child {
+        overflow-wrap: anywhere;
+    }
+
+    .contact-arrow {
+        width: clamp(2.25rem, 9vw, 2.5rem);
+        flex-shrink: 0;
+    }
+
+    .contact-note {
+        font-size: clamp(0.68rem, 2.4vw, 0.74rem);
+        text-align: center;
+    }
+
+    .social-links {
+        gap: clamp(0.55rem, 2.5vw, 0.7rem);
+        margin-top: clamp(1.25rem, 3.5vh, 1.75rem);
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .social-links a {
+        width: clamp(2.5rem, 10vw, 2.75rem);
+        height: clamp(2.5rem, 10vw, 2.75rem);
+        flex-shrink: 0;
+    }
+
+    .site-footer {
+        font-size: clamp(0.625rem, 2.5vw, 0.7rem);
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-identity {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero-title-line {
+        font-size: clamp(1.75rem, 9vw, 1.85rem);
+    }
+
+    .process-wrapper {
+        padding: var(--section-py) var(--section-px);
+    }
+
+    .passion-card-visual.meridian-visual {
+        height: clamp(120px, 34vw, 160px);
+    }
+}
+
+@media (max-width: 768px) and (orientation: landscape) {
+    .hero-layout {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.85rem;
+    }
+
+    .hero-aside {
+        border-left: 1px solid rgba(0, 0, 0, 0.08);
+        border-top: none;
+        padding-left: 1rem;
+        padding-top: 0.25rem;
+    }
+
+    .hero-identity {
+        flex-direction: row;
+    }
+
+    .hero-photo {
+        width: 96px;
+        height: 96px;
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+    .process-wrapper {
+        gap: 3rem;
+        padding: var(--section-py) var(--section-px);
+    }
+
+    .passion-section {
+        padding: var(--section-px) clamp(1.25rem, 3vw, 1.5rem);
+    }
+
+    .passion-card {
+        gap: 1rem;
+    }
+
+    .passion-card-desc {
+        font-size: clamp(0.9rem, 2vw, 1rem);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero-photo,
+    .hero-eyebrow,
+    .hero-title-line,
+    .hero-role,
+    .hero-aside,
+    .card-inner-main,
+    .card-inner-foot {
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
+
+    .scroll-arrow {
+        animation: none;
+    }
+}

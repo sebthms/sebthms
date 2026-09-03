@@ -1,0 +1,49 @@
+:root {
+    --card-initial-height: 44vh;
+    --card-initial-bottom: 3vh;
+    --landing-gap: 0.5rem;
+    --hero-top: clamp(5.5rem, 19vh, 22vh);
+
+    /* Espacements sections unifiés */
+    --section-px: clamp(1.125rem, 5vw, 3rem);
+    --section-py: clamp(2.5rem, 6vh, 4.5rem);
+    --section-gap: clamp(1rem, 3vw, 1.75rem);
+    --passion-card-pad: clamp(1rem, 3.5vw, 1.25rem);
+
+    /* Typographie fluide */
+    --text-xs: clamp(0.58rem, 1.6vw, 0.65rem);
+    --text-sm: clamp(0.72rem, 2vw, 0.875rem);
+    --text-base: clamp(0.875rem, 2.2vw, 1rem);
+    --text-lg: clamp(1rem, 2.5vw, 1.125rem);
+    --text-xl: clamp(1.25rem, 3.5vw, 1.8rem);
+    --text-2xl: clamp(1.5rem, 4vw, 2rem);
+    --text-hero: clamp(2rem, 5.5vw, 3.75rem);
+
+    --content-max: 1100px;
+    --axis-width: 24px;
+}
+
+@media (max-width: 768px) {
+    :root {
+        --card-initial-height: 40vh;
+        --card-initial-bottom: 2vh;
+        --landing-gap: 0;
+        --hero-top: 4.75rem;
+        --section-px: clamp(1rem, 4.5vw, 1.5rem);
+        --section-py: clamp(2rem, 5vh, 3rem);
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        --card-initial-height: 42vh;
+        --hero-top: 4.5rem;
+    }
+}
+
+@media (max-width: 768px) and (orientation: landscape) {
+    :root {
+        --hero-top: 4rem;
+        --card-initial-height: 52vh;
+    }
+}

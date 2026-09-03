@@ -1,0 +1,201 @@
+/* === CARTE IMMERSIVE === */
+.hero-card {
+    position: fixed;
+    bottom: var(--card-initial-bottom);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    height: var(--card-initial-height);
+    border-radius: 32px;
+    overflow: hidden;
+    z-index: 20;
+    background: #1a1a1a;
+    box-shadow:
+        0 40px 80px -20px rgba(0, 0, 0, 0.5),
+        0 0 0 1px rgba(255, 255, 255, 0.05);
+    transition:
+        width 0.05s,
+        height 0.05s,
+        border-radius 0.05s;
+    --mouse-x: 50%;
+    --mouse-y: 50%;
+    isolation: isolate;
+}
+
+/* Effet spotlight sur la carte */
+.hero-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+        rgba(255, 255, 255, 0.06),
+        transparent 40%
+    );
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.hero-card:hover::before {
+    opacity: 1;
+}
+
+/* Effet de bordure lumineuse */
+.hero-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: radial-gradient(
+        400px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+        rgba(255, 255, 255, 0.15),
+        transparent 60%
+    );
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.hero-card:hover::after {
+    opacity: 1;
+}
+
+/* === PRE-SCROLL CONTENT === */
+.pre-scroll-content {
+    position: absolute;
+    inset: 0;
+    padding: 1.5rem 1.75rem;
+    display: flex;
+    z-index: 15;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    overflow: hidden;
+}
+
+.card-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+.card-inner-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0.5rem 0;
+    opacity: 0;
+    transform: translateY(16px);
+    animation: fadeInUp 0.8s ease-out 0.55s forwards;
+}
+
+.card-eyebrow {
+    font-family: "Inter", sans-serif;
+    font-size: 0.65rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: rgba(255, 255, 255, 0.35);
+    margin: 0 0 1rem;
+}
+
+.card-headline {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(1.35rem, 2.4vw, 2rem);
+    font-weight: 400;
+    line-height: 1.35;
+    color: rgba(255, 255, 255, 0.92);
+    margin: 0 0 0.85rem;
+    letter-spacing: -0.01em;
+}
+
+.card-headline-accent {
+    font-style: italic;
+    color: white;
+}
+
+.card-subline {
+    font-family: "Inter", sans-serif;
+    font-size: clamp(0.78rem, 1.2vw, 0.88rem);
+    line-height: 1.55;
+    color: rgba(255, 255, 255, 0.42);
+    margin: 0;
+    max-width: 36ch;
+}
+
+.card-inner-foot {
+    opacity: 0;
+    transform: translateY(16px);
+    animation: fadeInUp 0.8s ease-out 0.75s forwards;
+}
+
+.card-pillars {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 1rem;
+    margin-bottom: 0.85rem;
+}
+
+.card-pillar {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    padding: 0 1rem;
+    border-right: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.card-pillar:first-child {
+    padding-left: 0;
+}
+
+.card-pillar:last-child {
+    border-right: none;
+    padding-right: 0;
+}
+
+.card-pillar-key {
+    font-family: "Inter", sans-serif;
+    font-size: 0.62rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.card-pillar-val {
+    font-family: "Inter", sans-serif;
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.72);
+    letter-spacing: 0.01em;
+}
+
+.card-footnote {
+    font-family: "Inter", sans-serif;
+    font-size: 0.65rem;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+    color: rgba(255, 255, 255, 0.28);
+    margin: 0;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}

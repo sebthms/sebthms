@@ -1,0 +1,38 @@
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    html,
+    body {
+        overflow-x: hidden;
+        max-width: 100vw;
+    }
+
+    body {
+        font-family: "Inter", sans-serif;
+        letter-spacing: -0.01em;
+        background: #ffffff;
+        color: #1d1d1f;
+        scrollbar-width: none;
+        overflow-y: auto;
+        -ms-overflow-style: none;
+    }
+
+    body::-webkit-scrollbar {
+        display: none;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: "Playfair Display", serif;
+    }
+}

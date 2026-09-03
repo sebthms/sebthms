@@ -1,0 +1,354 @@
+/* Diplômes au-dessus de l'axe, expériences regroupées en dessous. */
+.journey-section {
+    position: absolute;
+    inset: 0;
+    z-index: 8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--section-py) var(--section-px) 1.5rem;
+    opacity: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.journey-shell {
+    width: min(var(--content-max), 100%);
+    min-width: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+}
+
+.journey-title {
+    margin: 0 0 var(--section-gap);
+    color: #e3e3e3;
+    font-size: var(--text-2xl);
+    font-weight: 400;
+    letter-spacing: -0.03em;
+    flex-shrink: 0;
+}
+
+.journey-viewport {
+    overflow: hidden;
+    padding: 4px 0 20px;
+    flex: 1;
+    min-height: 0;
+    min-width: 0;
+}
+
+.journey-timeline {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    will-change: transform;
+}
+
+.journey-group {
+    display: grid;
+    grid-template-rows: 155px 36px auto;
+    flex: 0 0 max(850px, 85%);
+    min-width: 0;
+}
+
+.journey-diploma {
+    position: relative;
+    width: min(480px, calc(100% - 1rem));
+    align-self: end;
+    padding: 1rem 1.25rem;
+    border: 1px solid #ffffff14;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #303030, #252525);
+}
+
+.journey-diploma::after {
+    content: "";
+    position: absolute;
+    left: 24px;
+    bottom: -19px;
+    width: 1px;
+    height: 18px;
+    background: #777;
+}
+
+.journey-axis {
+    position: relative;
+}
+
+.journey-axis::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, #777, #4b4b4b);
+}
+
+.journey-group:last-child .journey-axis::before {
+    background: linear-gradient(90deg, #777, #4b4b4b 80%, transparent);
+}
+
+.journey-axis::after {
+    content: "";
+    position: absolute;
+    top: calc(50% - 3px);
+    left: 21px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #ccc;
+    box-shadow: 0 0 0 4px #242424;
+}
+
+.journey-company {
+    position: relative;
+    margin-right: 2rem;
+    padding-top: 0.25rem;
+    min-width: 0;
+}
+
+.journey-company::before {
+    content: "";
+    position: absolute;
+    top: -18px;
+    left: 24px;
+    width: 1px;
+    height: 18px;
+    background: #777;
+}
+
+.journey-company-header {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+    margin: 0 0 0.85rem;
+    min-width: 0;
+}
+
+.journey-company-header .journey-detail {
+    margin: 0;
+}
+
+.journey-diploma h3,
+.journey-company h3,
+.journey-card h4 {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    line-height: 1.4;
+    color: #e5e5e5;
+}
+
+.journey-diploma h3 {
+    font-size: var(--text-base);
+    margin-bottom: 0.7rem;
+}
+
+.journey-company h3 {
+    font-size: var(--text-lg);
+}
+
+.journey-card h4 {
+    font-size: var(--text-base);
+}
+
+.journey-detail {
+    margin: 0 0 0.45rem;
+    color: #aaa;
+    font-size: var(--text-sm);
+    overflow-wrap: anywhere;
+}
+
+.journey-projects {
+    display: flex;
+    gap: 0.85rem;
+    min-width: 0;
+}
+
+.journey-card {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+    padding: 1.1rem;
+    border: 1px solid #ffffff12;
+    border-radius: 10px;
+    background: linear-gradient(145deg, #292929, #222);
+    box-shadow: 0 10px 20px #00000018;
+}
+
+.journey-description {
+    margin: 0.7rem 0 1rem;
+    color: #b3b3b3;
+    font-size: var(--text-base);
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.journey-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    list-style: none;
+    margin: auto 0 0;
+    padding: 0;
+}
+
+.journey-tags li {
+    padding: 0.2rem 0.5rem;
+    border: 1px solid #ffffff14;
+    border-radius: 4px;
+    background: #ffffff04;
+    color: #c4c4c4;
+    font-size: clamp(0.72rem, 2vw, 0.8125rem);
+    line-height: 1.4;
+}
+
+/* Tablette : frise horizontale resserrée */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .journey-group {
+        flex: 0 0 max(720px, 90%);
+        grid-template-rows: 170px 32px auto;
+    }
+
+    .journey-company {
+        margin-right: 1.25rem;
+    }
+
+    .journey-card {
+        flex: 0 0 calc(50% - 0.425rem);
+        max-width: none;
+    }
+
+    .journey-projects {
+        flex-wrap: wrap;
+    }
+}
+
+/* Mobile : frise verticale */
+@media (max-width: 768px) {
+    .journey-section {
+        align-items: flex-start;
+        padding: clamp(3.5rem, 10vh, 4.5rem) var(--section-px) 1rem;
+        overflow: hidden;
+    }
+
+    .journey-viewport {
+        padding: 0 0 12px;
+        overflow: hidden;
+    }
+
+    .journey-timeline {
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+    }
+
+    .journey-group {
+        display: flex;
+        flex-direction: column;
+        flex: none;
+        width: 100%;
+        position: relative;
+        padding-left: calc(var(--axis-width) + 0.75rem);
+        padding-bottom: clamp(1.25rem, 4vw, 2rem);
+    }
+
+    .journey-group::before {
+        content: "";
+        position: absolute;
+        left: calc(var(--axis-width) / 2 - 0.5px);
+        top: 0.75rem;
+        bottom: 0;
+        width: 1px;
+        background: linear-gradient(180deg, #777 0%, #4b4b4b 88%, transparent 100%);
+    }
+
+    .journey-group:last-child::before {
+        background: linear-gradient(180deg, #777 0%, #4b4b4b 72%, transparent 100%);
+    }
+
+    .journey-diploma {
+        width: 100%;
+        align-self: stretch;
+    }
+
+    .journey-diploma::after {
+        display: none;
+    }
+
+    .journey-axis {
+        position: relative;
+        flex-shrink: 0;
+        height: 18px;
+    }
+
+    .journey-axis::before {
+        display: none;
+    }
+
+    .journey-axis::after {
+        top: 50%;
+        left: calc(-0.75rem - var(--axis-width) / 2 - 3.5px);
+        transform: translateY(-50%);
+        z-index: 1;
+    }
+
+    .journey-company {
+        margin-right: 0;
+        padding-top: 0;
+        width: 100%;
+    }
+
+    .journey-company::before {
+        display: none;
+    }
+
+    .journey-company-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.35rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .journey-company-header .journey-detail {
+        font-size: clamp(0.75rem, 2.2vw, 0.8125rem);
+    }
+
+    .journey-projects {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .journey-card {
+        flex: none;
+        width: 100%;
+        max-width: none;
+        padding: clamp(0.85rem, 3vw, 1.1rem);
+    }
+
+    .journey-description {
+        font-size: clamp(0.8125rem, 2.4vw, 0.9375rem);
+        margin: 0.55rem 0 0.85rem;
+    }
+}
+
+@media (max-height: 620px) {
+    .journey-section {
+        align-items: flex-start;
+    }
+
+    .journey-title {
+        font-size: var(--text-xl);
+        margin-bottom: 0.5rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .journey-timeline {
+        will-change: auto;
+    }
+}

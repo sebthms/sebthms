@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+@import "tailwindcss";
+
+@import "./styles/tokens.css";
+@import "./styles/base.css";
+@import "./styles/cursor.css";
+@import "./styles/header.css";
+@import "./styles/hero.css";
+@import "./styles/card.css";
+@import "./styles/process.css";
+@import "./styles/journey.css";
+@import "./styles/passion.css";
+@import "./styles/contact.css";
+@import "./styles/animations.css";
+@import "./styles/responsive.css";

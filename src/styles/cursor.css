@@ -1,0 +1,35 @@
+/* === EFFET CURSEUR SUR LE FOND === */
+body {
+    --cursor-x: 50%;
+    --cursor-y: 50%;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    left: var(--cursor-x);
+    top: var(--cursor-y);
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(
+        circle,
+        rgba(0, 0, 0, 0.04) 0%,
+        rgba(0, 0, 0, 0.02) 40%,
+        transparent 70%
+    );
+    pointer-events: none;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+
+body.cursor-active::before {
+    opacity: 1;
+}
+
+@media (hover: none), (pointer: coarse) {
+    body::before {
+        display: none;
+    }
+}
