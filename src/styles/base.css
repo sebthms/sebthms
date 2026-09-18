@@ -1,6 +1,6 @@
 @layer base {
     html {
-        scroll-behavior: smooth;
+        scroll-behavior: auto;
     }
 
     * {
@@ -18,13 +18,14 @@
         letter-spacing: -0.01em;
         background: #ffffff;
         color: #1d1d1f;
-        scrollbar-width: none;
         overflow-y: auto;
-        -ms-overflow-style: none;
     }
 
-    body::-webkit-scrollbar {
-        display: none;
+    @media (pointer: fine) {
+        body {
+            scrollbar-width: thin;
+            scrollbar-color: #77736d #1a1a1a;
+        }
     }
 
     h1,
@@ -35,4 +36,37 @@
     h6 {
         font-family: "Playfair Display", serif;
     }
+}
+
+.skip-link {
+    position: fixed;
+    top: 0.75rem;
+    left: 0.75rem;
+    z-index: 2000;
+    padding: 0.7rem 1rem;
+    border-radius: 0.5rem;
+    background: #fff;
+    color: #1d1d1f;
+    font: 600 0.8rem/1 "Inter", sans-serif;
+    text-decoration: none;
+    transform: translateY(-150%);
+}
+
+.skip-link:focus {
+    transform: translateY(0);
+}
+
+.noscript-message {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    left: 1rem;
+    z-index: 2000;
+    margin: 0;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    background: #fff;
+    color: #1d1d1f;
+    font: 400 0.8rem/1.5 "Inter", sans-serif;
+    box-shadow: 0 0.5rem 2rem #0003;
 }

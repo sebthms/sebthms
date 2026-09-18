@@ -1,0 +1,181 @@
+.quote-section {
+    position: absolute;
+    inset: 0;
+    z-index: 8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 var(--section-px);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.quote-layout {
+    display: grid;
+    grid-template-columns: minmax(9.5rem, 13rem) minmax(0, 40rem);
+    gap: clamp(1.5rem, 4vw, 3.5rem);
+    align-items: start;
+    width: min(58rem, 100%);
+}
+
+.quote-heading {
+    padding-top: 0.15rem;
+}
+
+.quote-eyebrow {
+    margin: 0 0 0.65rem;
+    font-family: "Inter", sans-serif;
+    font-size: 0.62rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #6f6b65;
+}
+
+.quote-title {
+    margin: 0;
+    font-family: "Playfair Display", serif;
+    font-size: clamp(1.75rem, 3.6vw, 2.3rem);
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -0.035em;
+    color: #d0cbc3;
+}
+
+.quote-intro {
+    margin: 1rem 0 0;
+    font-family: "Inter", sans-serif;
+    font-size: 0.78rem;
+    line-height: 1.55;
+    color: #77736d;
+}
+
+.quote-form {
+    display: grid;
+    gap: 0.9rem;
+}
+
+.quote-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.9rem;
+}
+
+.quote-field {
+    display: grid;
+    gap: 0.4rem;
+}
+
+.quote-field > span {
+    font-family: "Inter", sans-serif;
+    font-size: 0.68rem;
+    font-weight: 500;
+    color: #8f8a83;
+}
+
+.quote-field input,
+.quote-field select,
+.quote-field textarea {
+    width: 100%;
+    border: 1px solid #ffffff1a;
+    border-radius: 0.65rem;
+    background: #ffffff08;
+    padding: 0.7rem 0.8rem;
+    color: #d0cbc3;
+    font: 400 0.8rem/1.35 "Inter", sans-serif;
+    outline: none;
+    transition: border-color 180ms ease, background-color 180ms ease;
+}
+
+.quote-field input,
+.quote-field select {
+    min-height: 2.55rem;
+}
+
+.quote-field textarea {
+    min-height: 5rem;
+    resize: vertical;
+}
+
+.quote-field select {
+    color-scheme: dark;
+}
+
+.quote-field input::placeholder,
+.quote-field textarea::placeholder {
+    color: #5f5b56;
+}
+
+.quote-field input:focus,
+.quote-field select:focus,
+.quote-field textarea:focus {
+    border-color: #ffffff52;
+    background: #ffffff0d;
+}
+
+.quote-field input:focus-visible,
+.quote-field select:focus-visible,
+.quote-field textarea:focus-visible {
+    outline: 2px solid #d0cbc3;
+    outline-offset: 2px;
+}
+
+.quote-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.quote-status {
+    margin: 0;
+    color: #69655f;
+    font: 400 0.65rem/1.4 "Inter", sans-serif;
+}
+
+.quote-submit {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    flex: 0 0 auto;
+    border: 0;
+    border-radius: 999px;
+    padding: 0.72rem 1rem;
+    background: #d0cbc3;
+    color: #1a1a1a;
+    font: 600 0.72rem/1 "Inter", sans-serif;
+    cursor: pointer;
+    min-height: 44px;
+    transition: transform 180ms ease, background-color 180ms ease;
+}
+
+.quote-privacy {
+    margin: -0.2rem 0 0;
+    color: #69655f;
+    font: 400 0.62rem/1.45 "Inter", sans-serif;
+}
+
+.quote-privacy a {
+    color: #9b968f;
+    text-underline-offset: 0.18em;
+}
+
+.quote-submit:hover,
+.quote-submit:focus-visible {
+    transform: scale(1.03);
+    background: #fff;
+}
+
+.quote-submit:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .quote-field input,
+    .quote-field select,
+    .quote-field textarea,
+    .quote-submit {
+        transition: none;
+    }
+}

@@ -17,59 +17,7 @@
         width 0.05s,
         height 0.05s,
         border-radius 0.05s;
-    --mouse-x: 50%;
-    --mouse-y: 50%;
     isolation: isolate;
-}
-
-/* Effet spotlight sur la carte */
-.hero-card::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(
-        600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
-        rgba(255, 255, 255, 0.06),
-        transparent 40%
-    );
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    pointer-events: none;
-    z-index: 1;
-}
-
-.hero-card:hover::before {
-    opacity: 1;
-}
-
-/* Effet de bordure lumineuse */
-.hero-card::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    border-radius: inherit;
-    padding: 1px;
-    background: radial-gradient(
-        400px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
-        rgba(255, 255, 255, 0.15),
-        transparent 60%
-    );
-    -webkit-mask:
-        linear-gradient(#fff 0 0) content-box,
-        linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask:
-        linear-gradient(#fff 0 0) content-box,
-        linear-gradient(#fff 0 0);
-    mask-composite: exclude;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    pointer-events: none;
-    z-index: 2;
-}
-
-.hero-card:hover::after {
-    opacity: 1;
 }
 
 /* === PRE-SCROLL CONTENT === */

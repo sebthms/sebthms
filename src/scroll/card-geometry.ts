@@ -1,5 +1,6 @@
 import {
   getCardConfig,
+  getFittedCardInitial,
   PROJECTS_SHRINK_END,
   PHASE6_ENTER_END,
   PHASE6_ENTER_START,
@@ -22,7 +23,8 @@ export function computeCardLayout(
 ): CardLayout {
   const { winW, winH, progress, exitEased } = ctx;
   const { phase1, phase2 } = phases;
-  const { initial, passion } = getCardConfig(winW);
+  const { passion } = getCardConfig(winW);
+  const initial = getFittedCardInitial(winW, winH, ctx.heroBottom);
 
   const shrink = easeInOut(clamp(
     (progress - PHASE6_ENTER_END) / (PROJECTS_SHRINK_END - PHASE6_ENTER_END),

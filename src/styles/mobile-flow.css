@@ -1,0 +1,182 @@
+/* Keep this query aligned with scroll/mediaQueries.ts. */
+@media (max-width: 1024px), (max-height: 720px) {
+    .hero-scroll-container {
+        height: auto;
+        padding-top: 0;
+        background: #1a1a1a;
+    }
+
+    body,
+    main {
+        background: #1a1a1a;
+    }
+
+    #home, #process, #devis, #contact {
+        scroll-margin-top: calc(5.5rem + env(safe-area-inset-top, 0px));
+    }
+
+    .hero-section {
+        position: relative;
+        top: auto;
+        display: flex;
+        align-items: center;
+        min-height: 100vh;
+        min-height: 100svh;
+        opacity: 1;
+        transform: none;
+        filter: none;
+        padding-top: calc(5.5rem + env(safe-area-inset-top, 0px));
+        padding-bottom: clamp(3rem, 8vh, 5rem);
+        background: #fff;
+        pointer-events: auto;
+        will-change: opacity, transform;
+    }
+
+    .hero-card {
+        position: relative;
+        inset: auto;
+        width: 100%;
+        height: auto;
+        margin: 0;
+        transform: none;
+        border-radius: 0;
+        overflow: visible;
+        box-shadow: none;
+        transition: none;
+    }
+
+    .process-section,
+    .quote-section,
+    .contact-section {
+        position: relative;
+        inset: auto;
+        height: auto;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        pointer-events: auto;
+        overflow: visible;
+        transition: none;
+        padding: clamp(4rem, 10vw, 6rem) var(--section-px);
+    }
+
+    .pre-scroll-content {
+        display: none;
+    }
+
+    .process-section,
+    .quote-section,
+    .contact-section {
+        border-top: 1px solid #ffffff14;
+    }
+
+    .hero-photo, .hero-eyebrow, .hero-title-line, .hero-role,
+    .hero-aside {
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
+
+    .journey-layout {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1.25rem;
+        height: auto;
+    }
+
+    .journey-heading {
+        min-height: 0;
+    }
+
+    .journey-title {
+        height: auto;
+    }
+
+    .journey-title::after {
+        display: none;
+    }
+
+    .journey-title-word {
+        position: relative;
+        transform: none;
+        opacity: 1;
+    }
+
+    .journey-title-word:not(.is-active) {
+        display: none;
+    }
+
+    .journey-content {
+        position: relative;
+        left: auto;
+        top: auto;
+        width: 100%;
+        max-height: none;
+        overflow: visible;
+        transform: none;
+    }
+
+    .process-section .journey-org {
+        display: block;
+    }
+
+    .journey-dock {
+        opacity: 1;
+        transform: none;
+        will-change: auto;
+    }
+
+    .quote-layout {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .quote-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .quote-field input,
+    .quote-field select,
+    .quote-field textarea {
+        font-size: 1rem;
+    }
+
+    .quote-actions {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .quote-submit {
+        align-self: stretch;
+        justify-content: center;
+        min-height: 44px;
+    }
+
+    .contact-section {
+        min-height: auto;
+        margin-top: 0;
+        z-index: 40;
+        flex-direction: column;
+        padding: clamp(4rem, 10vw, 6rem) var(--section-px) 2rem;
+    }
+
+    .site-footer {
+        position: static;
+        width: 100%;
+        margin-top: 3rem;
+    }
+    .header.is-scrolled:not(.dark-mode) { background: #fff; backdrop-filter: none; }
+    .hero-card::before, .hero-card::after, body::before { display: none; }
+}
+
+@media (max-width: 768px) and (orientation: landscape) {
+    .hero-scroll-container {
+        padding-top: 0;
+    }
+
+    .hero-section {
+        padding-top: calc(4rem + env(safe-area-inset-top, 0px));
+    }
+}

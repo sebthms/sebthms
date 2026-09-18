@@ -3,17 +3,15 @@ import {
   NAV_TARGETS,
   PHASE2_END,
   PHASE4_ENTER_START,
-  PHASE6_ENTER_START,
 } from "./constants";
 import type { ScrollContext } from "./types";
+import { isFlowLayout, prefersReducedMotion } from "./mediaQueries";
 
 export function updateActiveNavLink(
   elements: PortfolioElements,
   ctx: ScrollContext,
 ): void {
   const { progress, inContactZone } = ctx;
-
-  elements.navLinks.forEach((link) => link.classList.remove("active"));
 
   let section: string;
   if (inContactZone) {
@@ -22,15 +20,13 @@ export function updateActiveNavLink(
     section = "home";
   } else if (progress < PHASE4_ENTER_START) {
     section = "process";
-  } else if (progress < PHASE6_ENTER_START) {
-    section = "parcours";
   } else {
-    section = "passion";
+    section = "devis";
   }
 
-  document
-    .querySelector(`.nav-link[data-section="${section}"]`)
-    ?.classList.add("active");
+  elements.navLinks.forEach((link) => {
+    link.classList.toggle("active", link.dataset.section === section);
+  });
 }
 
 export function initNav(
@@ -38,22 +34,23 @@ export function initNav(
   getWinH: () => number,
   closeMobileNav: () => void,
 ): void {
-  const { heroScrollContainer, contactSection } = elements;
+  const { heroScrollContainer } = elements;
 
-  document.querySelectorAll(".nav-link").forEach((link) => {
+  elements.navLinks.forEach((link) => {
     link.addEventListener("click", (e) => {
       e.preventDefault();
       closeMobileNav();
 
       const sectionId = link.getAttribute("data-section");
+      const behavior = prefersReducedMotion() ? "instant" : "smooth";
 
-      if (sectionId === "contact") {
-        contactSection?.scrollIntoView({ behavior: "smooth" });
+      if (isFlowLayout() && sectionId) {
+        document.getElementById(sectionId)?.scrollIntoView({ behavior });
         return;
       }
 
       if (sectionId === "home" || !sectionId) {
-        window.scrollTo({ top: 0, behavior: "smooth" });
+        window.scrollTo({ top: 0, behavior });
         return;
       }
 
@@ -63,7 +60,7 @@ export function initNav(
 
       window.scrollTo({
         top: targetProgress * maxScroll,
-        behavior: "smooth",
+        behavior,
       });
     });
   });

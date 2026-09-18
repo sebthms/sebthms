@@ -108,109 +108,6 @@ body.nav-open::after {
         overflow-wrap: anywhere;
     }
 
-    .process-wrapper {
-        flex-direction: column;
-        gap: var(--section-gap);
-        padding: var(--section-py) var(--section-px);
-    }
-
-    .process-header {
-        flex: none;
-    }
-
-    .process-title {
-        font-size: clamp(1.25rem, 5vw, 1.4rem);
-    }
-
-    .timeline {
-        padding-left: 0;
-    }
-
-    .timeline-content h3 {
-        font-size: clamp(0.9rem, 3vw, 0.95rem);
-    }
-
-    .timeline-short,
-    .timeline-detail p {
-        font-size: clamp(0.75rem, 2.8vw, 0.8rem);
-    }
-
-    .passion-label {
-        left: var(--section-px);
-        right: var(--section-px);
-        max-width: none;
-        top: clamp(4.25rem, 11vh, 5.5rem);
-    }
-
-    .passion-label-title {
-        font-size: clamp(1.25rem, 5.5vw, 1.45rem);
-    }
-
-    .passion-section {
-        padding: var(--section-px);
-    }
-
-    .passion-card,
-    .passion-card--link {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        gap: var(--passion-card-pad);
-        padding: var(--passion-card-pad);
-        overflow-y: auto;
-        -webkit-overflow-scrolling: touch;
-    }
-
-    .passion-card-visual {
-        display: flex;
-        flex: 0 0 auto;
-        width: 100%;
-        height: clamp(120px, 32vw, 180px);
-        min-height: 0;
-        padding: clamp(0.75rem, 2.5vw, 1rem);
-        border-radius: 12px;
-    }
-
-    .passion-card-visual.meridian-visual {
-        padding: 0;
-        height: clamp(140px, 34vw, 200px);
-    }
-
-    .meridian-preview {
-        transform: none;
-        object-fit: cover;
-        border-radius: 12px;
-    }
-
-    .voxel-preview {
-        width: min(100%, 140px);
-    }
-
-    .passion-card-body {
-        padding: 0;
-        width: 100%;
-        min-width: 0;
-    }
-
-    .passion-card-title {
-        font-size: clamp(1.35rem, 5.5vw, 1.75rem);
-    }
-
-    .passion-card-desc,
-    .project-note {
-        font-size: clamp(0.875rem, 3.2vw, 1rem);
-        line-height: 1.5;
-        overflow-wrap: anywhere;
-    }
-
-    .passion-tags {
-        gap: 0.35rem;
-    }
-
-    .passion-tags li {
-        font-size: clamp(0.72rem, 2.5vw, 0.8125rem);
-    }
-
     .contact-section {
         padding: clamp(4.5rem, 12vh, 5.5rem) var(--section-px)
             calc(3rem + env(safe-area-inset-bottom, 0px));
@@ -287,14 +184,6 @@ body.nav-open::after {
     .hero-title-line {
         font-size: clamp(1.75rem, 9vw, 1.85rem);
     }
-
-    .process-wrapper {
-        padding: var(--section-py) var(--section-px);
-    }
-
-    .passion-card-visual.meridian-visual {
-        height: clamp(120px, 34vw, 160px);
-    }
 }
 
 @media (max-width: 768px) and (orientation: landscape) {
@@ -317,25 +206,6 @@ body.nav-open::after {
     .hero-photo {
         width: 96px;
         height: 96px;
-    }
-}
-
-@media (max-width: 1024px) and (min-width: 769px) {
-    .process-wrapper {
-        gap: 3rem;
-        padding: var(--section-py) var(--section-px);
-    }
-
-    .passion-section {
-        padding: var(--section-px) clamp(1.25rem, 3vw, 1.5rem);
-    }
-
-    .passion-card {
-        gap: 1rem;
-    }
-
-    .passion-card-desc {
-        font-size: clamp(0.9rem, 2vw, 1rem);
     }
 }
 

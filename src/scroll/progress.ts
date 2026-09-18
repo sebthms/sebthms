@@ -1,5 +1,5 @@
-import { EXIT_SCROLL_RATIO, PHASE1_END, PHASE2_END } from "./constants";
-import { clamp, easeInOut, phaseRange } from "./easing";
+import { PHASE1_END, PHASE2_END } from "./constants";
+import { clamp, phaseRange } from "./easing";
 import type { PhaseProgress, ScrollContext } from "./types";
 
 export function computeScrollContext(
@@ -7,15 +7,12 @@ export function computeScrollContext(
   winW: number,
   winH: number,
   heroH: number,
-  contactTop: number | null,
+  contactStartProgress: number | null,
 ): ScrollContext {
   const maxScroll = Math.max(heroH - winH, 1);
   const progress = clamp(scrollY / maxScroll, 0, 1);
   const inContactZone =
-    contactTop !== null && scrollY + winH * 0.55 >= contactTop;
-  const scrollPastHero = Math.max(0, scrollY - maxScroll);
-  const exitScrollRange = winH * EXIT_SCROLL_RATIO;
-  const exitProgress = clamp(scrollPastHero / exitScrollRange, 0, 1);
+    contactStartProgress !== null && progress >= contactStartProgress;
 
   return {
     scrollY,
@@ -25,9 +22,6 @@ export function computeScrollContext(
     maxScroll,
     progress,
     inContactZone,
-    scrollPastHero,
-    exitProgress,
-    exitEased: easeInOut(exitProgress),
   };
 }
 

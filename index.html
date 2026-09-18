@@ -4,91 +4,96 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <!-- SEO Meta Tags -->
-        <title>Sébastien Thomas | Concepteur-développeur full stack web &amp; mobile</title>
+        <title>Sébastien Thomas | Concepteur-développeur web et mobile</title>
         <meta
             name="description"
-            content="Concepteur-développeur avec 3+ ans d'expérience en ESN (Tecken, Artdigit). Full stack Symfony, React, Next.js, NestJS et mobile React Native. De la conception à la mise en production."
-        />
-        <meta
-            name="keywords"
-            content="concepteur développeur, développeur full stack, Symfony, React, Next.js, NestJS, TypeScript, React Native, Angular, Ionic, API Platform, ESN"
+            content="Sébastien Thomas conçoit et développe des sites, applications web, mobiles et outils métier sur mesure, de la conception à la mise en production."
         />
         <meta name="author" content="Sébastien Thomas" />
         <meta name="robots" content="index, follow" />
-        <meta name="theme-color" content="#1d1d1f" />
+        <meta name="theme-color" content="#1a1a1a" />
         <link rel="canonical" href="https://sebthms.github.io/sebthms/" />
 
-        <!-- Open Graph -->
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Sébastien Thomas" />
         <meta property="og:url" content="https://sebthms.github.io/sebthms/" />
+        <meta property="og:site_name" content="Sébastien Thomas" />
         <meta
             property="og:title"
-            content="Sébastien Thomas | Concepteur-développeur full stack web &amp; mobile"
+            content="Sébastien Thomas | Concepteur-développeur web et mobile"
         />
         <meta
             property="og:description"
-            content="3+ ans d'expérience en ESN sur des projets web et mobile (ERP, LMS). Symfony, React, Next.js, NestJS, React Native. Conception, développement et mise en production."
+            content="Création de sites vitrines, e-commerce, applications mobiles et outils sur mesure. Devis gratuit sous 48h."
         />
         <meta
             property="og:image"
-            content="https://sebthms.github.io/sebthms/images/unnamed.jpg"
+            content="https://sebthms.github.io/sebthms/og-image.png"
         />
-        <meta property="og:image:alt" content="Sébastien Thomas — Concepteur-développeur" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Sébastien Thomas, concepteur-développeur web et mobile" />
         <meta property="og:locale" content="fr_FR" />
 
-        <!-- Twitter -->
         <meta name="twitter:card" content="summary_large_image" />
         <meta
             name="twitter:title"
-            content="Sébastien Thomas | Concepteur-développeur full stack web &amp; mobile"
+            content="Sébastien Thomas | Concepteur-développeur web et mobile"
         />
         <meta
             name="twitter:description"
-            content="Full stack Symfony, React, Next.js, NestJS et mobile React Native. De la conception à la mise en production en ESN."
+            content="Conception et développement d'applications web et mobiles, du besoin à la mise en production."
         />
-        <meta
-            name="twitter:image"
-            content="https://sebthms.github.io/sebthms/images/unnamed.jpg"
-        />
+        <meta name="twitter:image" content="https://sebthms.github.io/sebthms/og-image.png" />
+        <meta name="twitter:image:alt" content="Sébastien Thomas, concepteur-développeur web et mobile" />
 
-        <!-- Favicon -->
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <link rel="apple-touch-icon" href="/images/unnamed.jpg" />
+        <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+        <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
 
-        <!-- Preconnect -->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-        <!-- Structured Data -->
         <script type="application/ld+json">
             {
                 "@context": "https://schema.org",
-                "@type": "Person",
-                "name": "Sébastien Thomas",
-                "jobTitle": "Concepteur-développeur",
-                "url": "https://sebthms.github.io/sebthms/",
-                "email": "seb.thms.pro@gmail.com",
-                "image": "https://sebthms.github.io/sebthms/images/unnamed.jpg",
-                "description": "Concepteur-développeur, 3+ ans d'expérience en ESN sur des projets web et mobile, de la conception à la mise en production. Symfony, React, Next.js, NestJS, React Native.",
-                "sameAs": [
-                    "https://www.linkedin.com/in/sebastien-thms",
-                    "https://github.com/sebthms"
-                ],
-                "knowsAbout": [
-                    "Symfony",
-                    "React",
-                    "Next.js",
-                    "NestJS",
-                    "TypeScript",
-                    "Angular",
-                    "React Native",
-                    "Expo",
-                    "Ionic",
-                    "API Platform",
-                    "Architecture logicielle",
-                    "CI/CD"
+                "@graph": [
+                    {
+                        "@type": "Person",
+                        "@id": "https://sebthms.github.io/sebthms/#person",
+                        "name": "Sébastien Thomas",
+                        "jobTitle": "Concepteur-développeur web et mobile",
+                        "url": "https://sebthms.github.io/sebthms/",
+                        "image": "https://sebthms.github.io/sebthms/pp.jpg",
+                        "email": "mailto:seb.thms.pro@gmail.com",
+                        "sameAs": [
+                            "https://www.linkedin.com/in/sebastien-thms",
+                            "https://github.com/sebthms"
+                        ],
+                        "knowsAbout": [
+                            "Développement web",
+                            "Applications mobiles",
+                            "React",
+                            "TypeScript"
+                        ]
+                    },
+                    {
+                        "@type": "Service",
+                        "@id": "https://sebthms.github.io/sebthms/#service",
+                        "name": "Sébastien Thomas — Développement web et mobile",
+                        "url": "https://sebthms.github.io/sebthms/",
+                        "provider": { "@id": "https://sebthms.github.io/sebthms/#person" },
+                        "areaServed": "France",
+                        "serviceType": [
+                            "Développement de sites web",
+                            "Développement d'applications web",
+                            "Développement d'applications mobiles",
+                            "Développement d'outils métier sur mesure"
+                        ]
+                    },
+                    {
+                        "@type": "WebSite",
+                        "@id": "https://sebthms.github.io/sebthms/#website",
+                        "url": "https://sebthms.github.io/sebthms/",
+                        "name": "Sébastien Thomas",
+                        "inLanguage": "fr-FR",
+                        "publisher": { "@id": "https://sebthms.github.io/sebthms/#person" }
+                    }
                 ]
             }
         </script>
@@ -97,7 +102,7 @@
     </head>
 
     <body>
-        <!-- Header moderne -->
+        <a class="skip-link" href="#main-content">Aller au contenu</a>
         <header id="header" class="header">
             <div class="header-content">
                 <button
@@ -122,11 +127,8 @@
                     <a href="#process" class="nav-link" data-section="process"
                         >Méthode</a
                     >
-                    <a href="#parcours" class="nav-link" data-section="parcours"
-                        >Expérience</a
-                    >
-                    <a href="#passion" class="nav-link" data-section="passion"
-                        >Créations</a
+                    <a href="#devis" class="nav-link" data-section="devis"
+                        >Devis</a
                     >
                     <a href="#contact" class="nav-link" data-section="contact"
                         >Contact</a
@@ -136,24 +138,26 @@
         </header>
 
 
-        <main>
-            <section id="home" class="hero-scroll-container">
-                <div id="hero-section" class="hero-section">
+        <main id="main-content">
+            <div id="home" class="hero-scroll-container">
+                <section id="hero-section" class="hero-section" aria-labelledby="hero-title">
                     <div class="hero-layout">
                         <div class="hero-main">
                             <p class="hero-eyebrow">Portfolio · 2026</p>
                             <div class="hero-identity">
                                 <div class="hero-photo">
                                     <img
-                                        src="/images/unnamed.jpg"
-                                        alt="Sébastien Thomas"
+                                        src="./pp.jpg"
+                                        alt="Monogramme temporaire de Sébastien Thomas"
                                         width="200"
                                         height="200"
                                         loading="eager"
+                                        decoding="async"
+                                        fetchpriority="high"
                                     />
                                 </div>
                                 <div class="hero-name-block">
-                                    <h1 class="hero-title">
+                                    <h1 id="hero-title" class="hero-title">
                                         <span class="hero-title-line"
                                             >Sébastien</span
                                         >
@@ -175,20 +179,13 @@
     que l'autre.
                             </p>
                             <ul class="hero-traits">
-                                <li>🏡 Montpellier ou à distance</li>
-                                <li>👨‍💻 Freelance</li>
-                                <li> 🚀 Disponible pour un projet</li>
+                                <li><span aria-hidden="true">🏡</span> Montpellier ou à distance</li>
+                                <li><span aria-hidden="true">👨‍💻</span> Freelance</li>
+                                <li><span aria-hidden="true">🚀</span> Disponible pour un projet</li>
                             </ul>
                         </div>
                     </div>
-                </div>
-
-                <div id="passion-label" class="passion-label">
-                    <p class="passion-label-eyebrow">Créations</p>
-                    <h2 class="passion-label-title">
-                        Mes réalisations
-                    </h2>
-                </div>
+                </section>
 
                 <div id="container" class="hero-card">
                     <div id="pre-scroll-content" class="pre-scroll-content">
@@ -236,284 +233,212 @@
                     </div>
 
                     <!-- Section Process -->
-                    <section id="process" class="process-section">
-                        <div class="process-wrapper">
-                            <div
-                                class="timeline-h-track"
-                                aria-hidden="true"
-                            >
-                                <span
-                                    class="timeline-h-fill"
-                                    id="timeline-h-progress"
-                                ></span>
-                            </div>
-                            <div class="process-header">
-                                <h2 class="process-title">
-                                    Ma méthode
+                    <section id="process" class="process-section" aria-labelledby="process-title">
+                        <div class="journey-layout">
+                            <div class="journey-heading">
+                                <h2 id="process-title" class="journey-title" data-ghost="Développement">
+                                    <span class="journey-title-word is-active" data-label="echange">Échange</span>
+                                    <span class="journey-title-word" data-label="conception">Conception</span>
+                                    <span class="journey-title-word" data-label="dev">Développement</span>
+                                    <span class="journey-title-word" data-label="livraison">Livraison</span>
                                 </h2>
                             </div>
-                            <div class="timeline">
-                                <!-- Ligne animée SVG -->
-                                <svg
-                                    class="timeline-line"
-                                    viewBox="0 0 2 400"
-                                    preserveAspectRatio="none"
-                                >
-                                    <path
-                                        id="timeline-path"
-                                        d="M1 0 L1 400"
-                                        stroke="rgba(255,255,255,0.2)"
-                                        stroke-width="2"
-                                        fill="none"
-                                    />
-                                    <path
-                                        id="timeline-progress"
-                                        d="M1 0 L1 400"
-                                        stroke="rgba(255,255,255,0.6)"
-                                        stroke-width="2"
-                                        fill="none"
-                                        stroke-dasharray="400"
-                                        stroke-dashoffset="400"
-                                    />
-                                </svg>
-
-                                <div class="timeline-item" data-index="0">
-                                    <div class="timeline-number">01</div>
-                                    <div class="timeline-content">
-                                        <h3>Échange</h3>
-                                        <p class="timeline-short">
-                                            Comprendre le besoin.
-                                        </p>
-                                        <div class="timeline-detail">
-                                            <p>
-                                                Je clarifie le besoin, les
-                                                utilisateurs et les contraintes,
-                                                puis je fixe les priorités.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="timeline-item" data-index="1">
-                                    <div class="timeline-number">02</div>
-                                    <div class="timeline-content">
-                                        <h3>Conception</h3>
-                                        <p class="timeline-short">
-                                            Structurer l'interface.
-                                        </p>
-                                        <div class="timeline-detail">
-                                            <p>
-                                                Je structure les écrans, les
-                                                données et les parcours pour
-                                                partir sur une base claire.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="timeline-item" data-index="2">
-                                    <div class="timeline-number">03</div>
-                                    <div class="timeline-content">
-                                        <h3>Développement</h3>
-                                        <p class="timeline-short">
-                                            Développer la solution.
-                                        </p>
-                                        <div class="timeline-detail">
-                                            <p>
-                                                Je développe le front-end, le
-                                                back-end et les intégrations,
-                                                avec un code maintenable.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="timeline-item" data-index="3">
-                                    <div class="timeline-number">04</div>
-                                    <div class="timeline-content">
-                                        <h3>Livraison</h3>
-                                        <p class="timeline-short">
-                                            Mettre en ligne.
-                                        </p>
-                                        <div class="timeline-detail">
-                                            <p>
-                                                Hébergement, déploiement et
-                                                dernières vérifications avant
-                                                la mise en production.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-                    <section id="parcours" class="journey-section" aria-labelledby="journey-title">
-                        <div class="journey-shell">
-                            <h2 id="journey-title" class="journey-title">Expériences</h2>
-                            <div class="journey-viewport">
-                                <ol class="journey-timeline">
-                                    <li class="journey-group">
-                                        <article class="journey-diploma">
-                                            <p class="journey-detail">Diplôme · Bac+2 · 2022 — 2024</p>
-                                            <h3>Développeur web et web mobile</h3>
-                                            <ul class="journey-tags" aria-label="Technologies"><li>TypeScript</li><li>React</li><li>PHP</li><li>MySQL</li></ul>
-                                        </article>
-                                        <div class="journey-axis" aria-hidden="true"></div>
-                                        <section class="journey-company" aria-label="Expérience chez Tecken">
-                                            <header class="journey-company-header">
-                                                <h3>Tecken</h3>
-                                                <p class="journey-detail">Développeur web full-stack · Formateur · Déc. 2022 — Mars 2025</p>
-                                            </header>
-                                            <div class="journey-projects">
-                                                <article class="journey-card">
-                                                    <h4>ERP RH</h4>
-                                                    <p class="journey-description">Gestion des congés et des workflows internes, de l'API à l'interface.</p>
-                                                    <ul class="journey-tags" aria-label="Technologies"><li>Symfony</li><li>API Platform</li><li>Angular</li></ul>
-                                                </article>
-                                                <article class="journey-card">
-                                                    <h4>Plateforme LMS</h4>
-                                                    <p class="journey-description">Gestion des classes, ressources pédagogiques et examens.</p>
-                                                    <ul class="journey-tags" aria-label="Technologies"><li>Symfony 6</li></ul>
-                                                </article>
-                                            </div>
-                                        </section>
-                                    </li>
-                                    <li class="journey-group">
-                                        <article class="journey-diploma">
-                                            <p class="journey-detail">Diplôme · Bac+3 · 2024 — 2025</p>
-                                            <h3>Concepteur développeur d'applications</h3>
-                                            <ul class="journey-tags" aria-label="Technologies"><li>Spring Boot</li><li>SQL / NoSQL</li><li>UML</li><li>CI/CD</li></ul>
-                                        </article>
-                                        <div class="journey-axis" aria-hidden="true"></div>
-                                        <section class="journey-company" aria-label="Expérience chez Artdigit">
-                                            <header class="journey-company-header">
-                                                <h3>Artdigit</h3>
-                                                <p class="journey-detail">Alternance · Mars — Sept. 2025</p>
-                                            </header>
-                                            <div class="journey-projects">
-                                                <article class="journey-card">
-                                                    <h4>ERP Gestion de stock</h4>
-                                                    <p class="journey-description">Maintenance d'un ERP web et mobile pour la gestion et le suivi des stocks.</p>
-                                                    <ul class="journey-tags" aria-label="Technologies"><li>Next.js</li><li>NestJS</li></ul>
-                                                </article>
-                                                <article class="journey-card">
-                                                    <h4>App mobile livraison</h4>
-                                                    <p class="journey-description">Refonte du design web et développement complet de l'application mobile.</p>
-                                                    <ul class="journey-tags" aria-label="Technologies"><li>Expo</li><li>React Native</li></ul>
-                                                </article>
-                                                <article class="journey-card">
-                                                    <h4>ERP Livraison</h4>
-                                                    <p class="journey-description">Livraison dématérialisée et suivi en temps réel sur web et mobile.</p>
-                                                    <ul class="journey-tags" aria-label="Technologies"><li>Vite</li><li>React</li><li>Ionic</li><li>NestJS</li></ul>
-                                                </article>
-                                            </div>
-                                        </section>
-                                    </li>
-                                </ol>
-                            </div>
-                        </div>
-                    </section>
-
-                    <section id="passion" class="passion-section" aria-label="Projets personnels">
-                        <div class="projects-viewport">
-                            <div class="projects-track">
-                                <a
-                                    class="passion-card passion-card--link"
-                                    href="https://sebeboo.github.io/merise-diagrams/"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    aria-label="MERIDIAN — Voir la démo"
-                                >
-                                    <div class="passion-card-visual meridian-visual">
-                                        <img
-                                            class="meridian-preview"
-                                            src="/images/meridian-mcd.gif"
-                                            alt=""
-                                            width="1622"
-                                            height="988"
-                                            loading="lazy"
-                                            decoding="async"
-                                        />
-                                    </div>
-                                    <div class="passion-card-body">
-                                        <p class="project-category">Modélisation de données</p>
-                                        <h3 class="passion-card-title">MERIDIAN</h3>
-                                        <p class="passion-card-desc">Un éditeur MERISE sur canvas : concevez votre MCD, validez ses règles et générez automatiquement le MLD puis le SQL PostgreSQL.</p>
-                                        <p class="project-note">Validation en temps réel · Vues MCD, UML et MLD · Export SQL</p>
-                                        <ul class="passion-tags" aria-label="Technologies">
-                                            <li>React 19</li><li>TypeScript</li><li>React Flow</li><li>Zustand</li><li>Tailwind CSS</li><li>shadcn/ui</li>
-                                        </ul>
-                                    </div>
-                                </a>
-                                <article class="passion-card" aria-label="Micro Voxel">
-                            <div class="passion-card-visual">
-                                <div class="voxel-preview" aria-hidden="true">
-                                    <div class="voxel-grid">
-                                        <span></span><span></span><span></span><span></span>
-                                        <span></span><span></span><span></span><span></span>
-                                        <span></span><span></span><span></span><span></span>
-                                        <span></span><span></span><span></span><span></span>
-                                    </div>
-                                </div>
-                            </div>
-
-                                    <div class="passion-card-body">
-                                        <p class="project-category">Jeu navigateur · En développement</p>
-                                        <h3 class="passion-card-title">Micro Voxel</h3>
-                                        <p class="passion-card-desc">Un sandbox en micro-voxels dans le navigateur : monde destructible, placement de blocs et rendu WebGL optimisé.</p>
-                                        <p class="project-note">Moteur voxel · Génération procédurale · WebGL</p>
-                                        <ul class="passion-tags" aria-label="Technologies">
-                                            <li>Three.js</li><li>TypeScript</li><li>Vite</li>
-                                        </ul>
-                                    </div>
+                            <div class="journey-content">
+                                <article class="journey-entry journey-dock" data-kind="echange">
+                                    <h3 class="journey-org">Échange</h3>
+                                    <p class="journey-meta">
+                                        <svg class="method-icon" viewBox="0 0 24 24" aria-hidden="true">
+                                            <path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4Z"/>
+                                            <path d="M8 8h8M8 12h5"/>
+                                        </svg>
+                                        <span>Cadrer le projet.</span>
+                                    </p>
+                                    <p class="journey-copy">
+                                        Je transforme une idée ou un besoin métier en périmètre concret et partagé.
+                                    </p>
+                                    <ul class="method-list">
+                                        <li>Atelier de découverte avec les parties prenantes</li>
+                                        <li>Analyse des utilisateurs, objectifs et contraintes</li>
+                                        <li>Audit de l'existant et identification des priorités</li>
+                                        <li>Estimation, planning et critères de réussite</li>
+                                    </ul>
+                                </article>
+                                <article class="journey-entry journey-dock" data-kind="conception">
+                                    <h3 class="journey-org">Conception</h3>
+                                    <p class="journey-meta">
+                                        <svg class="method-icon" viewBox="0 0 24 24" aria-hidden="true">
+                                            <rect x="3" y="3" width="18" height="18" rx="2"/>
+                                            <path d="M3 9h18M9 21V9"/>
+                                        </svg>
+                                        <span>Définir l'architecture.</span>
+                                    </p>
+                                    <p class="journey-copy">
+                                        Je conçois une solution claire avant d'écrire le code, du parcours utilisateur jusqu'aux choix techniques.
+                                    </p>
+                                    <ul class="method-list">
+                                        <li>Rédaction du cahier des charges et des user stories</li>
+                                        <li>Wireframes, maquettes et prototypes d'interface</li>
+                                        <li>Modélisation UML, Merise et schéma de données</li>
+                                        <li>Architecture front-end, API, back-end et sécurité</li>
+                                    </ul>
+                                </article>
+                                <article class="journey-entry journey-dock" data-kind="dev">
+                                    <h3 class="journey-org">Développement</h3>
+                                    <p class="journey-meta">
+                                        <svg class="method-icon" viewBox="0 0 24 24" aria-hidden="true">
+                                            <path d="m8 9-4 3 4 3M16 9l4 3-4 3M14 5l-4 14"/>
+                                        </svg>
+                                        <span>Construire le produit.</span>
+                                    </p>
+                                    <p class="journey-copy">
+                                        Je construis le produit par étapes testables, avec une base maintenable et adaptée à ses usages réels.
+                                    </p>
+                                    <ul class="method-list">
+                                        <li>Mise en place du projet, de la base de données et des environnements</li>
+                                        <li>Développement des interfaces web ou mobiles</li>
+                                        <li>Création des API, règles métier et intégrations externes</li>
+                                        <li>Tests, revues de code, corrections et démonstrations régulières</li>
+                                    </ul>
+                                </article>
+                                <article class="journey-entry journey-dock" data-kind="livraison">
+                                    <h3 class="journey-org">Livraison</h3>
+                                    <p class="journey-meta">
+                                        <svg class="method-icon" viewBox="0 0 24 24" aria-hidden="true">
+                                            <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09Z"/>
+                                            <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.2 12.2 0 0 1 22 2c0 2.72-.78 7.5-6.05 11a22.4 22.4 0 0 1-3.95 2Z"/>
+                                            <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/>
+                                        </svg>
+                                        <span>Mettre en production.</span>
+                                    </p>
+                                    <p class="journey-copy">
+                                        Je prends en charge le passage en production et prépare la suite pour que le produit reste fiable et évolutif.
+                                    </p>
+                                    <ul class="method-list">
+                                        <li>Recette fonctionnelle, contrôle qualité et validation finale</li>
+                                        <li>Déploiement automatisé, configuration et sauvegardes</li>
+                                        <li>Vérification des accès, performances et erreurs</li>
+                                        <li>Documentation, prise en main et maintenance évolutive</li>
+                                    </ul>
                                 </article>
                             </div>
                         </div>
-                        <div class="projects-pagination" aria-hidden="true">
-                            <span class="is-active"></span><span></span>
+                    </section>
+
+                    <section id="devis" class="quote-section" aria-labelledby="quote-title">
+                        <div class="quote-layout">
+                            <div class="quote-heading">
+                                <p class="quote-eyebrow">Parlons de votre projet</p>
+                                <h2 id="quote-title" class="quote-title">Votre devis.</h2>
+                                <p class="quote-intro">
+                                    Quelques informations suffisent pour préparer un premier cadrage adapté à votre besoin.
+                                </p>
+                            </div>
+                            <form id="quote-form" class="quote-form" aria-describedby="quote-status quote-privacy">
+                                <div class="quote-grid">
+                                    <label class="quote-field">
+                                        <span>Nom</span>
+                                        <input type="text" name="name" autocomplete="name" required />
+                                    </label>
+                                    <label class="quote-field">
+                                        <span>E-mail</span>
+                                        <input type="email" name="email" autocomplete="email" required />
+                                    </label>
+                                    <label class="quote-field">
+                                        <span>Type de projet</span>
+                                        <select name="projectType" required>
+                                            <option value="" selected disabled>Sélectionner</option>
+                                            <option>Site vitrine</option>
+                                            <option>Application web</option>
+                                            <option>Application mobile</option>
+                                            <option>E-commerce</option>
+                                            <option>Outil métier sur mesure</option>
+                                            <option>Maintenance ou évolution</option>
+                                            <option>Autre</option>
+                                        </select>
+                                    </label>
+                                    <label class="quote-field">
+                                        <span>Budget indicatif</span>
+                                        <select name="budget" required>
+                                            <option value="" selected disabled>Sélectionner</option>
+                                            <option>Moins de 2 000 €</option>
+                                            <option>2 000 € — 5 000 €</option>
+                                            <option>5 000 € — 10 000 €</option>
+                                            <option>10 000 € et plus</option>
+                                            <option>À définir ensemble</option>
+                                        </select>
+                                    </label>
+                                </div>
+                                <label class="quote-field">
+                                    <span>Échéance souhaitée</span>
+                                    <input type="text" name="deadline" placeholder="Ex. juin 2027" />
+                                </label>
+                                <label class="quote-field">
+                                    <span>Votre besoin</span>
+                                    <textarea name="details" rows="3" placeholder="Objectifs, fonctionnalités, utilisateurs…" required></textarea>
+                                </label>
+                                <div class="quote-actions">
+                                    <p id="quote-status" class="quote-status" aria-live="polite">
+                                        L'envoi ouvrira votre application e-mail.
+                                    </p>
+                                    <button type="submit" class="quote-submit">
+                                        Préparer ma demande <span aria-hidden="true">↗</span>
+                                    </button>
+                                </div>
+                                <p id="quote-privacy" class="quote-privacy">
+                                    Les informations restent dans votre navigateur jusqu'à l'ouverture de votre application e-mail.
+                                    Consultez la <a href="./politique-confidentialite.html">politique de confidentialité</a>.
+                                </p>
+                            </form>
                         </div>
                     </section>
-                </div>
-            </section>
 
-            <section id="contact" class="contact-section">
-                <div class="contact-wrapper">
-                    <p class="contact-eyebrow">Un projet en tête ?</p>
-                    <h2 class="contact-title">Écrivons-nous.</h2>
-                    <a
-                        class="contact-email"
-                        href="mailto:seb.thms.pro@gmail.com"
-                        aria-label="Écrire à Sébastien Thomas par e-mail"
-                    >
-                        <span>seb.thms.pro@gmail.com</span>
-                        <span class="contact-arrow" aria-hidden="true">↗</span>
-                    </a>
-                    <p class="contact-note">Je réponds généralement sous 48h.</p>
-                    <a
-                        class="contact-cv"
-                        href="sebastien-thomas-cv.pdf"
-                        download="Sebastien-Thomas-CV.pdf"
-                        type="application/pdf"
-                    >
-                        Télécharger mon CV
-                    </a>
-                    <nav class="social-links" aria-label="Réseaux sociaux">
-                        <a href="https://www.linkedin.com/in/sebastien-thms" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                            <img src="/icons/linked.svg" alt="" aria-hidden="true" />
-                        </a>
-                        <a href="https://github.com/sebthms" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                            <img src="/icons/git.svg" alt="" aria-hidden="true" />
-                        </a>
-                        <a href="/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                            <img src="/icons/insta.svg" alt="" aria-hidden="true" />
-                        </a>
-                    </nav>
+                    <section id="contact" class="contact-section" aria-labelledby="contact-title">
+                        <div class="contact-wrapper">
+                            <p class="contact-eyebrow">Un projet en tête ?</p>
+                            <h2 id="contact-title" class="contact-title">Écrivons-nous.</h2>
+                            <p class="contact-hub">
+                                Retrouvez mes créations sur
+                                <a
+                                    class="contact-hub-link"
+                                    href="https://sebthms.github.io/sebthms/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >sebthms.github.io/sebthms/</a>
+                            </p>
+                            <a
+                                class="contact-email"
+                                href="mailto:seb.thms.pro@gmail.com"
+                                aria-label="Écrire à Sébastien Thomas par e-mail"
+                            >
+                                <span>seb.thms.pro@gmail.com</span>
+                                <span class="contact-arrow" aria-hidden="true">↗</span>
+                            </a>
+                            <p class="contact-note">Je réponds généralement sous 48h.</p>
+                            <nav class="social-links" aria-label="Réseaux sociaux">
+                                <a href="https://www.linkedin.com/in/sebastien-thms" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                                    <img src="./icons/linked.svg" alt="" aria-hidden="true" />
+                                </a>
+                                <a href="https://github.com/sebthms" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                                    <img src="./icons/git.svg" alt="" aria-hidden="true" />
+                                </a>
+                            </nav>
+                        </div>
+                        <footer class="site-footer">
+                            <p>© 2026 Sébastien Thomas.</p>
+                            <nav aria-label="Informations légales">
+                                <a href="./mentions-legales.html">Mentions légales</a>
+                                <a href="./politique-confidentialite.html">Confidentialité</a>
+                            </nav>
+                        </footer>
+                    </section>
                 </div>
-            </section>
+            </div>
         </main>
-        <footer class="site-footer">
-            <p>© 2026 Sébastien Thomas. Tous droits réservés.</p>
-        </footer>
+        <noscript>
+            <p class="noscript-message">
+                JavaScript est nécessaire aux animations. Vous pouvez toujours
+                <a href="mailto:seb.thms.pro@gmail.com">me contacter par e-mail</a>.
+            </p>
+        </noscript>
     </body>
 </html>

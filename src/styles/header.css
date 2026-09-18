@@ -68,6 +68,12 @@
     color: #1d1d1f;
 }
 
+.nav-link:focus-visible,
+.nav-toggle:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 4px;
+}
+
 .nav-link.active {
     color: #1d1d1f;
 }
@@ -135,7 +141,7 @@
     transform: translateY(-6.5px) rotate(-45deg);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .header {
         padding: 0.85rem 0;
         padding-top: max(0.85rem, env(safe-area-inset-top, 0px));
@@ -154,8 +160,8 @@
         top: 0;
         right: 0;
         width: min(17.5rem, 88vw);
-        height: 100dvh;
         height: 100vh;
+        height: 100dvh;
         flex-direction: column;
         align-items: flex-start;
         gap: 0;
@@ -196,12 +202,3 @@
     }
 }
 
-@media (max-width: 1024px) and (min-width: 769px) {
-    .header-nav {
-        gap: 1rem;
-    }
-
-    .nav-link {
-        font-size: 0.82rem;
-    }
-}

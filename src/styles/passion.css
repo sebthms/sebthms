@@ -49,27 +49,41 @@ body.passion-landing:not(.contact-zone)::before {
     inset: 0;
     opacity: 0;
     display: flex;
-    align-items: center;
+    align-items: stretch;
     justify-content: center;
-    padding: 1.35rem 1.5rem;
+    padding: 1.5rem 1.75rem 1.35rem;
     z-index: 12;
     pointer-events: none;
     overflow: hidden;
     flex-direction: column;
-    gap: 0.8rem;
 }
 
 .passion-card {
     display: grid;
     grid-template-columns: 1.05fr 0.95fr;
-    gap: 1.25rem;
+    gap: 1.5rem;
     width: 100%;
     height: 100%;
     align-items: center;
-    opacity: 1;
-    flex: 0 0 100%;
     min-width: 0;
-    will-change: opacity, transform;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 0;
+    background: #1a1a1a;
+    box-shadow: none;
+    transform-origin: center top;
+    will-change: transform, opacity;
+    user-select: none;
+}
+
+.projects-stack .passion-card:not(.is-front) {
+    background: #2a2a2a;
+}
+
+.projects-stack .passion-card:not(.is-front) .passion-card-visual,
+.projects-stack .passion-card:not(.is-front) .passion-card-body {
+    opacity: 0;
 }
 
 .passion-card-visual {
@@ -82,7 +96,7 @@ body.passion-landing:not(.contact-zone)::before {
         rgba(52, 211, 153, 0.06) 100%
     );
     border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 16px;
+    border-radius: 18px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -227,50 +241,131 @@ body.passion-landing:not(.contact-zone)::before {
     transition: none;
 }
 
-/* Deux projets, un défilement horizontal piloté par le scroll. */
 .projects-viewport {
     width: 100%;
     flex: 1;
     min-height: 0;
+    position: relative;
     overflow: hidden;
 }
-.projects-track {
-    display: flex;
-    height: 100%;
-    will-change: transform;
-    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+
+.projects-stack {
+    position: relative;
+    width: 100%;
+    height: calc(100% - 8px);
+    cursor: grab;
+    touch-action: pan-y;
 }
-.passion-card {
-    padding: 0 0.5rem;
-    box-sizing: border-box;
+
+.projects-stack.is-dragging {
+    cursor: grabbing;
 }
+
+.projects-stack .passion-card {
+    position: absolute;
+    inset: 0;
+}
+
 .passion-card--link {
     display: grid;
     grid-template-columns: 1.05fr 0.95fr;
     gap: 1.25rem;
     color: inherit;
     text-decoration: none;
-    cursor: pointer;
-    border-radius: 12px;
-    transition: opacity 180ms ease;
+    cursor: grab;
 }
-.passion-card--link:hover {
-    opacity: 0.92;
+
+.projects-stack.is-dragging .passion-card--link {
+    cursor: grabbing;
 }
+
 .passion-card--link:focus-visible {
     outline: 2px solid rgba(255, 255, 255, 0.85);
     outline-offset: 4px;
 }
+
 .project-category {
     margin: 0 0 0.7rem;
     color: #aaa;
     font-size: 0.8125rem;
     letter-spacing: 0.08em;
 }
-.project-note { margin: 0; color: #a5a5a5; font-size: 0.875rem; line-height: 1.5; }
-.projects-pagination { display: flex; justify-content: center; gap: 0.45rem; }
-.projects-pagination span { width: 24px; height: 2px; background: #ffffff30; }
-.projects-pagination .is-active { background: #ddd; }
+
+.project-note {
+    margin: 0;
+    color: #a5a5a5;
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+.projects-pagination {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 22;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.85rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.35s ease;
+}
+
+.projects-pagination.is-visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.projects-dots {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.projects-dots button {
+    width: 6px;
+    height: 6px;
+    padding: 0;
+    border: 0;
+    border-radius: 999px;
+    background: rgba(29, 29, 31, 0.28);
+    cursor: pointer;
+    transition:
+        width 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+        background 0.35s ease;
+}
+
+.projects-dots button.is-active {
+    width: 18px;
+    background: #1d1d1f;
+}
+
+.projects-dots button:focus-visible,
+.projects-nav:focus-visible {
+    outline: 2px solid #1d1d1f;
+    outline-offset: 3px;
+}
+
+.projects-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    padding: 0;
+    border: 0;
+    border-radius: 999px;
+    background: transparent;
+    color: #1d1d1f;
+    cursor: pointer;
+    opacity: 0.45;
+    transition: opacity 0.3s ease;
+}
+
+.projects-nav:hover {
+    opacity: 1;
+}
 .meridian-visual {
     position: relative;
     min-width: 0;
@@ -278,6 +373,7 @@ body.passion-landing:not(.contact-zone)::before {
     padding: 0;
     background: #101010;
     border: 0;
+    border-radius: 18px;
     overflow: hidden;
 }
 .meridian-preview {
@@ -295,9 +391,9 @@ body.passion-landing:not(.contact-zone)::before {
     visibility: visible;
 }
 @media (prefers-reduced-motion: reduce) {
-    .projects-track {
+    .projects-stack .passion-card,
+    .projects-dots button {
         transition: none;
-        will-change: auto;
     }
 
     .passion-card--link {
@@ -306,7 +402,7 @@ body.passion-landing:not(.contact-zone)::before {
 }
 
 @media (max-height: 650px) {
-    .passion-card { overflow-y: auto; align-items: start; }
+    .passion-card { align-items: start; }
     .passion-card-visual { min-height: 230px; }
     .passion-card-visual.meridian-visual { min-height: 0; }
 }

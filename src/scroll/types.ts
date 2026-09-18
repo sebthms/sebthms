@@ -7,9 +7,6 @@ export interface ScrollContext {
   maxScroll: number;
   progress: number;
   inContactZone: boolean;
-  scrollPastHero: number;
-  exitProgress: number;
-  exitEased: number;
 }
 
 /** Sous-progressions hero + carte uniquement */

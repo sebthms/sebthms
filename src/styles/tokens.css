@@ -8,8 +8,6 @@
     --section-px: clamp(1.125rem, 5vw, 3rem);
     --section-py: clamp(2.5rem, 6vh, 4.5rem);
     --section-gap: clamp(1rem, 3vw, 1.75rem);
-    --passion-card-pad: clamp(1rem, 3.5vw, 1.25rem);
-
     /* Typographie fluide */
     --text-xs: clamp(0.58rem, 1.6vw, 0.65rem);
     --text-sm: clamp(0.72rem, 2vw, 0.875rem);
