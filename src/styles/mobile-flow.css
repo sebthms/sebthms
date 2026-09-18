@@ -1,7 +1,25 @@
 /* Keep this query aligned with scroll/mediaQueries.ts. */
-@media (max-width: 1024px), (max-height: 720px) {
-    .hero-scroll-container {
+@media (max-width: 1024px), (max-height: 720px), (pointer: coarse), (hover: none) {
+    html,
+    html.is-flow-layout {
+        overflow-x: visible;
+        overflow-y: auto;
         height: auto;
+        max-width: 100%;
+    }
+
+    body {
+        overflow-x: hidden;
+        overflow-y: auto;
+        overscroll-behavior-y: auto;
+        -webkit-overflow-scrolling: touch;
+        height: auto;
+        position: static;
+        touch-action: manipulation;
+    }
+
+    .hero-scroll-container {
+        height: auto !important;
         padding-top: 0;
         background: #1a1a1a;
     }
@@ -16,45 +34,51 @@
     }
 
     .hero-section {
-        position: relative;
-        top: auto;
+        position: relative !important;
+        top: auto !important;
         display: flex;
         align-items: center;
         min-height: 100vh;
         min-height: 100svh;
-        opacity: 1;
-        transform: none;
-        filter: none;
+        opacity: 1 !important;
+        transform: none !important;
+        filter: none !important;
         padding-top: calc(5.5rem + env(safe-area-inset-top, 0px));
         padding-bottom: clamp(3rem, 8vh, 5rem);
         background: #fff;
         pointer-events: auto;
-        will-change: opacity, transform;
+        will-change: auto;
     }
 
     .hero-card {
-        position: relative;
-        inset: auto;
-        width: 100%;
-        height: auto;
+        position: relative !important;
+        inset: auto !important;
+        left: auto !important;
+        right: auto !important;
+        top: auto !important;
+        bottom: auto !important;
+        width: 100% !important;
+        height: auto !important;
         margin: 0;
-        transform: none;
+        transform: none !important;
         border-radius: 0;
-        overflow: visible;
+        overflow: visible !important;
         box-shadow: none;
         transition: none;
+        pointer-events: auto;
+        touch-action: pan-y;
     }
 
     .process-section,
     .quote-section,
     .contact-section {
-        position: relative;
-        inset: auto;
-        height: auto;
-        opacity: 1;
-        visibility: visible;
-        transform: none;
-        pointer-events: auto;
+        position: relative !important;
+        inset: auto !important;
+        height: auto !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+        pointer-events: auto !important;
         overflow: visible;
         transition: none;
         padding: clamp(4rem, 10vw, 6rem) var(--section-px);
@@ -97,14 +121,13 @@
         display: none;
     }
 
-    .journey-title-word {
+    .journey-title-static {
+        display: block;
         position: relative;
-        transform: none;
-        opacity: 1;
     }
 
-    .journey-title-word:not(.is-active) {
-        display: none;
+    .journey-title-word {
+        display: none !important;
     }
 
     .journey-content {
@@ -167,7 +190,10 @@
         width: 100%;
         margin-top: 3rem;
     }
-    .header.is-scrolled:not(.dark-mode) { background: #fff; backdrop-filter: none; }
+    .header.is-scrolled:not(.dark-mode) {
+        background: transparent;
+        backdrop-filter: none;
+    }
     .hero-card::before, .hero-card::after, body::before { display: none; }
 }
 

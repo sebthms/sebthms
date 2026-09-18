@@ -48,6 +48,10 @@
     pointer-events: none;
 }
 
+.journey-title-static {
+    display: none;
+}
+
 .journey-title-word {
     position: absolute;
     left: 0;

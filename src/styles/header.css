@@ -98,9 +98,9 @@
     padding: 0;
     border: none;
     border-radius: 999px;
-    background: rgba(255, 255, 255, 0.72);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    background: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
     cursor: pointer;
     pointer-events: auto;
     z-index: 1002;
@@ -122,7 +122,7 @@
 }
 
 .header.dark-mode .nav-toggle {
-    background: rgba(255, 255, 255, 0.1);
+    background: transparent;
 }
 
 .header.dark-mode .nav-toggle-bar {
@@ -145,6 +145,15 @@
     .header {
         padding: 0.85rem 0;
         padding-top: max(0.85rem, env(safe-area-inset-top, 0px));
+        background: transparent;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+    }
+
+    .header.is-scrolled:not(.dark-mode) {
+        background: transparent;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
     }
 
     .header-content {

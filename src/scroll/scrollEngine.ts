@@ -35,7 +35,10 @@ export function createScrollEngine(elements: PortfolioElements) {
   };
 
   const applyFrame = (smoothProgress: number) => {
-    if (updateFlowLayout()) return;
+    if (isFlowLayout()) {
+      updateFlowLayout();
+      return;
+    }
 
     const heroHeight = elements.heroScrollContainer.offsetHeight;
     const maxScroll = Math.max(heroHeight - winH, 1);
@@ -65,7 +68,11 @@ export function createScrollEngine(elements: PortfolioElements) {
   });
 
   const onScroll = () => {
-    if (isFlowLayout() || prefersReducedMotion()) {
+    if (isFlowLayout()) {
+      updateFlowLayout();
+      return;
+    }
+    if (prefersReducedMotion()) {
       inertia.setImmediate(getRawProgress());
       return;
     }
@@ -76,6 +83,10 @@ export function createScrollEngine(elements: PortfolioElements) {
     winW = window.innerWidth;
     winH = window.innerHeight;
     syncLandingVars(winH);
+    if (isFlowLayout()) {
+      updateFlowLayout();
+      return;
+    }
     inertia.setImmediate(getRawProgress());
   };
 
